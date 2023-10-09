@@ -1,14 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BMIFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/ageTextView"
+            android:layout_width="43dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="AGE"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/genderTextView"
+            android:layout_width="193dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="GENDER"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/ageEditText"
+            tools:layout_editor_absoluteX="109dp" />
+
+        <TextView
+            android:id="@+id/heightTextView"
+            android:layout_width="101dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="HEIGHT"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/femaleRB" />
+
+        <TextView
+            android:id="@+id/weightTextView"
+            android:layout_width="107dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="WEIGHT"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/heightEditText"
+            tools:layout_editor_absoluteX="152dp" />
+
+        <RadioButton
+            android:id="@+id/maleRB"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="Male"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/genderTextView"
+            tools:layout_editor_absoluteY="152dp" />
+
+        <RadioButton
+            android:id="@+id/femaleRB"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:text="Female"
+            app:layout_constraintEnd_toEndOf="@+id/genderTextView"
+            app:layout_constraintTop_toTopOf="@+id/maleRB" />
+
+        <Button
+            android:id="@+id/calculateBtn"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="CALCULATE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightEditText" />
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:text="CLEAR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculateBtn" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="206dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="20dp"
+            android:text="BMI: "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clearBtn" />
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="numberSigned"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="cm"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heightTextView" />
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="kg"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
