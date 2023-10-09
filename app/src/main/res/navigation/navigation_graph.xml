@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/caloriFragment">
+
+    <fragment
+        android:id="@+id/BMIFragment"
+        android:name="com.mertyigit0.bodycheck.BMIFragment"
+        android:label="fragment_b_m_i"
+        tools:layout="@layout/fragment_b_m_i" >
+        <action
+            android:id="@+id/action_BMIFragment_to_caloriFragment"
+            app:destination="@id/caloriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caloriFragment"
+        android:name="com.mertyigit0.bodycheck.CaloriFragment"
+        android:label="fragment_calori"
+        tools:layout="@layout/fragment_calori" >
+        <action
+            android:id="@+id/action_caloriFragment_to_BMIFragment"
+            app:destination="@id/BMIFragment" />
+    </fragment>
+</navigation>
